@@ -1,0 +1,35 @@
+echo "🚀 Pre commit Started..."
+
+echo "⌛ Formatting..."
+
+# Check for formatting issues
+if ! pnpm format; then
+  echo "Formatting issues found. Please format your code before committing."
+  exit 1
+fi
+
+echo "⌛ Check for lint errors..."
+
+# Check for linting errors
+if ! pnpm lint; then
+  echo "Linting errors found. Please fix them before committing."
+  exit 1
+fi
+
+echo "⌛ Typecheck..."
+
+pnpm typecheck
+
+echo "⌛ Check..."
+
+pnpm -s -r exec -- pnpm run -r check || true
+
+echo "⌛ App Build..."
+
+pnpm build
+
+echo "⌛ Add Stage..."
+
+git add .
+
+echo "✔️  Pre commit Done"
