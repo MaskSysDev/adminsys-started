@@ -1,4 +1,4 @@
-# SiteSys Started
+# AdminSys Started
 
 This is a robust and scalable template for building modern applications using [Next.js 15](https://nextjs.org/), [React 19](https://react.dev/), and [Tailwind CSS 4](https://tailwindcss.com/). Developed with a focus on best practices, TypeScript, automatic formatting, and linting.
 

@@ -1,5 +1,5 @@
 import { Icons } from "@/components/layout/icons"
-import { Logo } from "@/components/layout/logo/logo-sitesys"
+import { Logo } from "@/components/layout/logo/logo-adminsys"
 
 import { env } from "@/config/env"
 import type {
@@ -23,7 +23,7 @@ import { siteConfigSchema } from "@/config/validation/site-config.schema"
  * - Objeto contendo os metadados do site
  */
 const siteMeta: SiteMeta = {
-  name: "SiteSys Started",
+  name: "AdminSys Started",
   description:
     "React App with Next.js, Typescript, TailwindCSS, Shadcn, Biome, Husky, Commitlint and more.",
   url: env.NEXT_PUBLIC_APP_URL,
@@ -39,7 +39,7 @@ const siteMeta: SiteMeta = {
     "Husky",
     "Commitlint",
   ],
-  twitterHandle: "@sitesys",
+  twitterHandle: "@adminsys",
 }
 
 /**
@@ -104,8 +104,8 @@ const socialLinks: SocialLink[] = [
  * - Objeto contendo informações de contato
  */
 const contactInfo: ContactInfo = {
-  contactEmail: "contato@sitesys.com.br",
-  supportEmail: "suporte@sitesys.com.br",
+  contactEmail: "contato@adminsys.com.br",
+  supportEmail: "suporte@adminsys.com.br",
 }
 
 /**
@@ -123,7 +123,7 @@ const authorInfo: AuthorInfo = {
   authorUrl: "https://github.com/MaskSysDev",
   creator: "Mask",
   publisher: "MaskSysDev",
-  projectUrl: "https://github.com/MaskSysDev/sitesys-started",
+  projectUrl: "https://github.com/MaskSysDev/adminsys-started",
 }
 
 /**
@@ -181,6 +181,10 @@ export const navbar01 = {
       label: "Features",
       href: "/#features",
     },
+    {
+      label: "Dashboard",
+      href: "/admin/dashboard",
+    },
   ],
 }
 
@@ -195,7 +199,7 @@ export const navbar01 = {
  * - Objeto contendo as propriedades do rodapé.
  */
 export const footer01 = {
-  name: "SiteSys Started",
+  name: "AdminSys Started",
   author: "MaskSysDev",
   authorUrl: "https://github.com/MaskSysDev",
   socialLinks: [
@@ -228,9 +232,9 @@ export const footer01 = {
  * - Objeto contendo as propriedades da seção de herói.
  */
 export const hero01 = {
-  title: "SiteSys Started Boilerplate",
+  title: "AdminSys Started Boilerplate",
   subTitle: "Template",
-  subTitleColor: "Web",
+  subTitleColor: "Admin",
   description:
     "React App with Next.js, Typescript, TailwindCSS, Shadcn, Biome, Husky, Commitlint and more.",
   size: "90",
@@ -243,7 +247,7 @@ export const hero01 = {
     },
     action02: {
       label: "GitHub",
-      href: "https://github.com/MaskSysDev/sitesys-started",
+      href: "https://github.com/MaskSysDev/adminsys-started",
     },
   },
 }
@@ -296,6 +300,51 @@ export const featuresSection = {
       icon: Icons.shadcn,
       title: "Shadcn UI",
       description: "Modern, accessible, and production-ready UI components.",
+    },
+  ],
+}
+
+export const adminSidebar = {
+  id: "1",
+  label: "AdminSys",
+  sections: [
+    {
+      id: "2",
+      label: "Admin",
+      items: [
+        {
+          id: "3",
+          label: "Dashboard",
+          url: "/admin/dashboard",
+          path: "",
+          subItems: [],
+        },
+        {
+          id: "4",
+          label: "Folder 01",
+          url: "",
+          path: "/folder-01",
+          subItems: [
+            {
+              id: "5",
+              label: "Submenu-01",
+              url: "/admin/folder-01/submenu-01",
+            },
+            {
+              id: "6",
+              label: "Submenu-02",
+              url: "/admin/folder-01/submenu-02",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+  navSecondary: [
+    {
+      id: "1",
+      label: "Documentation",
+      url: "/docs",
     },
   ],
 }
