@@ -51,14 +51,24 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 ```
 src/
 ├── app/                   # Application pages and layouts (App Router)
+│   ├── (admin)/           # Group for authenticated admin routes
+│   ├── (home)/            # Group for public home routes
+│   ├── layout.tsx         # Root layout
+│   ├── not-found.tsx      # Custom 404 page
+│   ├── manifest.ts        # Web app manifest configuration
+│   ├── robots.ts          # robots.txt configuration
+│   └── sitemap.ts         # sitemap.xml configuration
 ├── components/
+│   ├── auth/              # Authentication-related components
 │   ├── dev/               # Development-specific components
-│   ├── layout/            # Layout components (Navbar, Footer, etc.)
+│   ├── layout/            # Layout components (Navbar, Footer, Sidebar, etc.)
 │   └── ui/                # Reusable UI components from Shadcn
 ├── config/                # Site and environment configurations
+├── data/                  # Data fetching logic
 ├── hooks/                 # Custom React hooks
 ├── lib/                   # Utility functions and libraries
-└── styles/                # Global styles
+├── styles/                # Global styles
+└── types/                 # Global TypeScript types
 ```
 
 ## 🛠️ Available Scripts
